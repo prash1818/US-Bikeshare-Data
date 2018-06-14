@@ -24,7 +24,7 @@ def get_city():
         return get_city()
 
 
-def get_time_period():
+def gettimeperiod():
     '''Asks the user for a time period and returns the specified filter.
     Args:
         none.
@@ -43,10 +43,10 @@ def get_time_period():
         return ['none', 'no filter']
     else:
         print("\nI'm sorry, I'm not sure which time period you're trying to filter by. Let's try again.")
-        return get_time_period()
+        return gettimeperiod()
 
 
-def get_month():
+def getmonth():
     '''Asks the user for a month and returns the specified month.
     Args:
         none.
@@ -68,9 +68,9 @@ def get_month():
         return '06'
     else:
         print("\nI'm sorry, I'm not sure which month you're trying to filter by. Let's try again.")
-        return get_month()
+        return getmonth()
 
-def get_day():
+def getday():
     '''Asks the user for a day of the week and returns the specified day.
     Args:
         none.
@@ -94,9 +94,9 @@ def get_day():
         return 6
     else:
         print("\nI'm sorry, I'm not sure which day of the week you're trying to filter by. Let's try again.")
-        return get_day()
+        return getday()
 
-def popular_month(df):
+def popularmonth(df):
     '''Given a dataframe of bikeshare data, this function returns the month with the most trips.
     Args:
         df: dataframe of bikeshare data
@@ -109,7 +109,7 @@ def popular_month(df):
     return "Most popular month for start time: " + calendar.month_name[int(trips_by_month.sort_values(ascending=False).index[0])]
 
 
-def popular_day(df):
+def popularday(df):
     '''Given a dataframe of bikeshare data, this function returns the day of the week with the most trips.
     Args:
         df: dataframe of bikeshare data
@@ -122,7 +122,7 @@ def popular_day(df):
     return "Most popular day of the week for start time: " + calendar.day_name[int(trips_by_day_of_week.sort_values(ascending=False).index[0])]
 
 
-def popular_hour(df):
+def popularhour(df):
     '''Given a dataframe of bikeshare data, this function returns the hour of the day with the most trips.
     Args:
         df: dataframe of bikeshare data
@@ -136,7 +136,7 @@ def popular_hour(df):
     d = datetime.datetime.strptime(most_pop_hour_int, "%H")
     return "Most popular hour of the day for start time: " + d.strftime("%I %p")
 
-def trip_duration(df):
+def tripduration(df):
     '''Given a dataframe of bikeshare data, this function returns the total trip duration and average trip duration
     Args:
         df: dataframe of bikeshare data
@@ -157,7 +157,7 @@ def trip_duration(df):
     avg_trip_duration = "Average trip duration: %d hrs %02d min %02d sec" % (h, m, s)
     return [total_trip_duration, avg_trip_duration]
 
-def popular_stations(df):
+def popularstations(df):
     '''Given a dataframe of bikeshare data, this function returns the most popular start and end stations
     Args:
         df: dataframe of bikeshare data
@@ -180,7 +180,7 @@ def popular_stations(df):
     return [most_popular_start_station, most_popular_end_station]
 
 
-def popular_trip(df):
+def populartrip(df):
     '''Given a dataframe of bikeshare data, this function returns the most popular trip (i.e. combination of start station and end station)
     Args:
         df: dataframe of bikeshare data
