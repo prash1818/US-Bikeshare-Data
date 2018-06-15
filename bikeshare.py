@@ -157,7 +157,6 @@ def trip_duration(df):
     avg_trip_duration = "Average trip duration: %d hrs %02d min %02d sec" % (h, m, s)
     return [total_trip_duration, avg_trip_duration]
 
-def popularstations(df):
 def popular_stations(df):
     '''Given a dataframe of bikeshare data, this function returns the most popular start and end stations
     Args:
